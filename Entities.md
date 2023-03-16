@@ -52,9 +52,8 @@ United Solar, as mentioned earlier, is a solar panel production and installation
 #### Fields
 
 - [PK] Installation ID : unique auto-number
-- Date & Time Started : DateTime
-- Date & Time Ended : DateTime
 - [FK] Account -> Account ID
+- [FK] Work Order -> Work Order ID
 
 ### Product (Custom)
 
@@ -77,6 +76,26 @@ United Solar, as mentioned earlier, is a solar panel production and installation
 ### Certification (Custom)
 
 #### Fields
+
+- [PK] Certification ID : auto-number
+- Certification Name : Text
+
+### Certification Held (Custom)
+- Junction Object with Contact & Certification
+
 ### Work Order (Custom)
 
+#### Fields
+- [PK] Work Order Number : auto-number
+- Start Date & Time : Date/Time
+- End Date & Time : Date/TIme
+- [FK] Engineer -> Contact ID
+- [FK] Reimbursment Request -> Reimbursment ID
+
 ### Reimbursment (Custom)
+
+#### Fields
+
+- [PK] Reimbursment ID : auto number
+- Reimbursment Reason : text area
+- Reimbursment Amount : currency
